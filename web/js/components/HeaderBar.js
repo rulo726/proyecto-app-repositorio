@@ -15,17 +15,24 @@ export function HeaderBar({
   return html`
     <header class="bg-white border-b border-slate-200 px-4 lg:px-6 py-3 flex flex-wrap items-center justify-between gap-3 sticky top-0 z-30 shadow-sm">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+        <a
+          href="./index.html"
+          class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-sm hover:bg-blue-700 transition"
+          title="Volver a la página de inicio"
+        >
           🦷
-        </div>
+        </a>
         <div>
           <div class="flex items-center gap-2">
             <h1 class="text-base lg:text-lg font-bold text-slate-900 tracking-tight">
               DentalRoute VRP
             </h1>
-            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
-              Servicio Técnico Dental
-            </span>
+            <a
+              href="./index.html"
+              class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200 transition"
+            >
+              ← Inicio
+            </a>
           </div>
           <p class="text-xs text-slate-500">
             Planificación inteligente de rutas para ${techCount} ${techCount === 1 ? 'técnico' : 'técnicos'} · ${clinicsCount} ${clinicsCount === 1 ? 'clínica' : 'clínicas'}
